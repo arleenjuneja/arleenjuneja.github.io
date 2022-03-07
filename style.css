@@ -13,7 +13,9 @@ body {
   font-family: sans-serif;
   line-height: 1.7;
 }
-
+#projects {
+  margin: 100px auto;
+}
 nav {
   display: flex;
   justify-content: flex-end;
@@ -50,15 +52,37 @@ nav {
   /* transform: scale(1.2); */
 }
 
-h2 {
+h3 {
   font-size: 1.8rem;
   font-weight: 500;
 }
 #about .container {
-  color: #0f1e47;
+  display: flex;
+  flex-direction: row;
+  margin: 100px auto;
   max-width: 960px;
-  margin: 200px auto;
-  font-size: 1.5rem;
+  gap: 60px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+#about .description {
+  max-width: 400px;
+}
+@media screen and (max-width: 1380px){
+  #about .container {
+    max-width: 900px;
+  }
+  /* #about .description {
+    max-width: 550px;
+  } */
+}
+#about img {
+  max-width: 100%;
+  height: auto;
+}
+#about .description {
+  max-width: 700px;
 }
 #about h2 {
   margin-bottom: 2.2rem;
@@ -72,7 +96,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 .projects-grid {
   display: grid;
@@ -80,27 +103,66 @@ h2 {
   /* grid-template-columns: repeat(3, 211.99px); */
   grid-auto-rows: 250px;
   max-width: 960px;
-  margin: 200px auto;
+  margin: 150px auto;
   margin-top: 50px;
   gap: 25px;
 }
 .project-box img {
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
+}
+@media screen and (min-width: 1100px) {
+  #about .description {
+    font-size: 1.1rem;
+  }
 }
 @media screen and (max-width: 1100px) {
   .projects-grid, #about .container {
     max-width: 750px;
   }
+  #about .container {
+    display: flex;
+    flex-direction: row;
+    margin: 100px auto;
+    max-width: 650px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    text-align: center;
+  }
+  #about .description {
+    max-width: 400px;
+  }
+  #about .image {
+    height: 290px;
+  }
 }
 @media screen and (max-width: 768px) {
   #projects .container {
     grid-template-columns: 300px;
-    margin: 200px auto;
+    /* margin: 100px auto; */
   }
   .projects-grid, #about .container {
     max-width: 450px;
     text-align: center;
+  }
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin: 150px auto;
+    color: #0f1e47;
+    max-width: 450px;
+  }
+  #about img {
+    max-width: 85%;
+    height: auto;
+  }
+  #about .image {
+    height: auto;
   }
 }
 .project-box {

@@ -273,6 +273,9 @@ h3 {
   margin: 2rem 0;
   margin-top: 2.4rem;
 }
+.fa-brands, .fa-regular {
+  transition: all 1.3s ease-in-out;
+}
 .contact-list .fa-brands:hover, .fa-regular:hover {
   color: #a7b5da;
 }
